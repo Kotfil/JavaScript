@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title> Изучаем язык JavaScript </title>
+  <script type="text/javascript">
+function valid(from){
+var fail = false;
+var name = form.name.value;
+var password = from.password.value;
+var RePassword = from.RePassword.value;
+var state = from.state.value;
+if (name == "" || name == " ")
+fail = "Вы не ввели своё имя";
+else if(password == "")
+fail = "Вы не вели свое пароль";
+else if(password == RePassword)
+fail = "Пароли не совпадают"
+else if(state == "")
+fail = "Укажите пол"
+if(fail)
+alert (fail);
+}
+  </script>
+</head>
+<body>
+  <form action="" method="post" name="test" id="from">
+<label for="name">Имя:</label>
+<input type="text"  name="name" placeholder="Имя" id="name" /><br/><br/>
+<label for="password">Пароль:</label>
+<input type="password"  name="password" placeholder="Пароль" id="password" /><br/><br/>
+<label for="RePassword">Проверка пароля:</label>
+<input type="password"  name="RePassword" placeholder="Введите пароль" id="RePassword" /><br/><br/>
+<span>Пол:</span>
+<input type="radio"  name="state" id="male" value="Мужской" /><label for="">Мужской </label>
+<input type="radio"  name="state" id="female" value="Женский" /><label for="">Женский </label>
+<input type="button" onclick="valid(document.getElementById('form')"  name="submit" value="submit" value="Готово"/>
+</from>
+</body>
+</html>
